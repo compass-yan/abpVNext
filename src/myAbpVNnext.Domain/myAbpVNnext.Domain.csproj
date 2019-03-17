@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\myAbpVNnext.Domain.Shared\myAbpVNnext.Domain.Shared.csproj" />
+    <PackageReference Include="Volo.Abp.Ddd.Domain" Version="0.14.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MyCompanyName\myAbpVNnext\Localization\Domain\*.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="MyCompanyName\myAbpVNnext\Localization\Domain\*.json" />
+  </ItemGroup>
+
+</Project>
